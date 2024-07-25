@@ -1,0 +1,29 @@
+{
+  "appenders": {
+    "file": {
+      "type": "file",
+      "filename": "logs/error.log",
+      "maxLogSize": 10485760,
+      "backups": 3
+    },
+    "console": {
+      "type": "console"
+    }
+  },
+  "categories": {
+    "default": {
+      "appenders": [
+        "file",
+        "console"
+      ],
+      "level": "error"
+    }
+  },
+
+  "disableClustering": true, 
+  "pm2": true,
+  "exclude": [
+    "/path-browserify/",
+    "/url\//" 
+  ]
+}
